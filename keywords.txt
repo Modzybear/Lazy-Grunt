@@ -1,0 +1,14 @@
+bitmask32->uint16_t
+bitmask16->uint8_t
+bitmask8->bit
+struct->block_pointer
+long->uint32_t
+short->uint16_t
+enum16->uint16_t
+int32->uint32_t
+string32->char [4]
+colorbyte->uint8_t
+index->uint32_t
+char->char
+float->float
+dependency->dependency
