@@ -29,8 +29,7 @@ file will be in the same directory as the program.
 
 ## Python Version
 
-At this time I have not check compatibility between Python 2 and 3, however
-I believe both will work.
+This project is build for Python 2.
 
 ## License
 
