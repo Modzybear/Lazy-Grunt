@@ -7,7 +7,7 @@ to C++ header files with all relevent data written into structs.
 ## Necessary Files
 There are two necessary files: sizes.txt and keywords.txt.
 sizes.txt contains a list of types and their binary length.
-keywords.txt contains a list of .ent types and their c++-friendly 
+keywords.txt contains a list of .ent types and their c++-friendly
 translations. Each line in the files contains a key-value pair structured
 as follows:
 
@@ -17,7 +17,7 @@ ent_type->c++-friendly
 
 This release is an initial release with a *majority* of the functionality
 I plan to implement. Both of the necessary files are incomplete, and therefore
-the header files that are generated at this point aren't of much use. 
+the header files that are generated at this point aren't of much use.
 
 ## How To Use
 
@@ -37,6 +37,6 @@ Lazy Grunt is available under the BSD three-clause license.
 See the LICENSE file for more information.
 
 ## TO DO
-- Finish making sizes.txt and keywords.txt
+
 - Implement recursive conversion when given a folder
-- Generate more code that utilizes the generated structs.
+- Generate .cpp code.
