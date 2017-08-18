@@ -3,7 +3,7 @@
 # Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
 #
 # 1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
-# 
+#
 # 2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
 #
 # 3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
@@ -24,7 +24,7 @@ def create_tag(path):
 	if (path == None):
 		return
 	tag = et.parse(path).getroot()
-	
+
 	# Check for malformed xml.
 	if (tag == None):
 		print "Error parsing file: \"" + path + "\""
@@ -36,9 +36,11 @@ def create_tag(path):
 		return
 
 	# Create the .h file and write to it.
-	output = open(tag.attrib["class"] + ".h", "w+")
+	struct = open(tag.attrib["class"] + "_structure.h", "w+")
+	header = open(tag.attrib["class"] + ".h", "w+")
 	errors = open("errors.txt", "w+")
-	ent.print_struct(tag, output, errors)
+	header.write("#include \"" + tag.attrib["class"] + "_structure.h\"\n")
+	ent.print_struct(tag, struct, header, errors)
 
 # Get command line arguments.
 def get_argv():
